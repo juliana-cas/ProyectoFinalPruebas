@@ -1,0 +1,36 @@
+Instrucciones para ejecutar el proyecto:
+
+
+Ejecutar las siguientes líneas en SQL shell (psql):
+
+para acceder: 
+Server [localhost]: localhost
+Database [postgres]: postgres 
+Port [5432]: 5432 
+Username [postgres]: postgres 
+Contraseña para usuario postgres: postgres
+
+para crear la base de datos: CREATE DATABASE tasks;
+para acceder a la base de datos creada: \c tasks
+
+para crear la tabla de tasks:CREATE TABLE task (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(255) NOT NULL,
+    description TEXT,
+    completed BOOLEAN DEFAULT FALSE
+);
+
+para ver las tablas generadas: \dt
+
+Para las pruebas de integracion:
+
+ejecutar TaskIntegrationTest
+
+Para las prueba unitarias: 
+ejecutar TaskControllerTest 
+
+Para la prueba de bd:
+ejecutar DatabaseConnectionTest 
+
+Para las pruebas de API:
+ejecutar TaskControllerAPITest
