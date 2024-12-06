@@ -22,6 +22,12 @@ para crear la tabla de tasks:CREATE TABLE task (
 
 para ver las tablas generadas: \dt
 
+para ingresar datos: INSERT INTO tasks (title, description, completed) 
+VALUES ('Mi nueva tarea', 'Descripción breve', false);
+
+para ver los datos ingresados: SELECT * FROM tasks;
+
+
 Para las pruebas de integracion:
 
 ejecutar TaskIntegrationTest
